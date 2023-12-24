@@ -44,7 +44,7 @@ test = y['2022-01-01':]
 
 def sales_amount(train, test, y_pred, title):
     mae = mean_absolute_error(test, y_pred)
-    train["1985":].plot(legend=True, label="TRAIN", title=f"{title}, MAE: {round(mae,2)}")
+    train["2015":].plot(legend=True, label="TRAIN", title=f"{title}, MAE: {round(mae,2)}")
     test.plot(legend=True, label="TEST", figsize=(6, 4))
     y_pred.plot(legend=True, label="PREDICTION")
     plt.show()
